@@ -33,9 +33,9 @@ for j in x:
 
 # objective function 설정
 # 각 인덱스 별로 Xp와 Cp의 값을 곱한 것의 합을 구하는 함수입니다.
-obj = quicksum(x[i]* c[i] for i in range(10), GRB.MAXIMIZE)
+obj = quicksum(x[i]* c[i] for i in range(10), GRB.MINIMIZE)
 #해당 값을 setObjective obj함수로 설정합니다. 
-model.setObjective(obj, GRB.MAXIMIZE)
+model.setObjective(obj, GRB.MINIMIZE)
 
 # slackness 변수 지정
 slackness = 1
